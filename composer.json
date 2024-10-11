@@ -1,0 +1,59 @@
+{
+  "name": "onomica/module-customer-group-catalog",
+  "version": "1.0.0",
+  "description": "Customer Group Catalog Extension by Onomica",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "onomica",
+      "homepage": "https://onomica.com"
+    }
+  ],
+  "require": {
+    "shopware/core": "~6.6",
+    "shopware/administration": "~6.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "OnomicaCustomerGroup\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "OnomicaCustomerGroup\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "OnomicaCustomerGroup\\OnomicaCustomerGroup",
+    "copyright": "onomica",
+    "label": {
+      "de-DE": "Onomica Customer Group Catalog",
+      "en-GB": "Onomica Customer Group Catalog"
+    },
+    "description": {
+      "de-DE": "Verwalten Sie mühelos Produktkataloge basierend auf Kundengruppen mit dem Onomica Customer Group Catalog. Passen Sie Ihr Angebot an spezifische Zielgruppen an, steigern Sie das Kundenengagement und erhöhen Sie den Umsatz durch gezielte Aktionen und Rabatte.",
+      "en-GB": "Effortlessly manage product catalogs based on customer groups with Onomica Customer Group Catalog. Tailor your offerings to specific audiences, enhance customer engagement, and boost sales through targeted promotions and discounts."
+    },
+    "manufacturerLink": {
+      "de-DE": "https://www.onomica.com/",
+      "en-GB": "https://www.onomica.com/"
+    },
+    "supportLink": {
+      "de-DE": "https://www.onomica.com/",
+      "en-GB": "https://www.onomica.com/"
+    }
+  },
+  "scripts": {
+    "cs-fixer-dry": [
+      "@php ../../../vendor/bin/php-cs-fixer fix . --dry-run --rules=@PER-CS2.0,no_unused_imports"
+    ],
+    "cs-fixer": [
+      "@php ../../../vendor/bin/php-cs-fixer fix . --rules=@PER-CS2.0,no_unused_imports"
+    ],
+    "phpstan": [
+      "@php ../../../src/Core/DevOps/StaticAnalyze/phpstan-bootstrap.php",
+      "@php ../../../vendor/bin/phpstan analyze"
+    ]
+  }
+}
